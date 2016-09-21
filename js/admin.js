@@ -1,8 +1,8 @@
-if( typeof( bmwedding_admin ) == 'undefined' ) {
-    bmwedding_admin = {};
+if( typeof( onlyfisch_admin ) == 'undefined' ) {
+    onlyfisch_admin = {};
 }
 
-bmwedding_admin.utils = function ( $ ) {
+onlyfisch_admin.utils = function ( $ ) {
     // Private Variables
     var $doc = $(document);
 
@@ -10,7 +10,7 @@ bmwedding_admin.utils = function ( $ ) {
 	    
 	    init : function () {
 		    
-		    bmwedding_admin.utils.setupSidebarControls();
+		    onlyfisch_admin.utils.setupSidebarControls();
 		    
 	    },
 
@@ -64,5 +64,5 @@ bmwedding_admin.utils = function ( $ ) {
 } ( jQuery );
 
 jQuery(function($) {
-    bmwedding_admin.utils.init();
+    onlyfisch_admin.utils.init();
 });

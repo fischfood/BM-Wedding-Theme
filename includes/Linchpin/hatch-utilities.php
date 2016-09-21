@@ -105,7 +105,7 @@ class HatchUtilities {
 
 		<?php if ( ! is_home() ) { ?>
 
-			<li><a href="<?php esc_attr_e( get_option( 'home' ) ); ?>"><?php esc_html_e( 'Home', 'bmus' ); ?></a></li>
+			<li><a href="<?php esc_attr_e( get_option( 'home' ) ); ?>"><?php esc_html_e( 'Home', 'ofits' ); ?></a></li>
 
 			<?php if ( is_category() || is_single() ) : ?>
 
@@ -173,14 +173,14 @@ class HatchUtilities {
 		// Are there comments to navigate through?
 		if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 		<nav class="navigation comment-navigation" role="navigation">
-			<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'bmus' ); ?></h2>
+			<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'ofits' ); ?></h2>
 			<div class="nav-links">
 				<?php
-					if ( $prev_link = get_previous_comments_link( __( 'Older Comments', 'bmus' ) ) ) :
+					if ( $prev_link = get_previous_comments_link( __( 'Older Comments', 'ofits' ) ) ) :
 						printf( '<div class="nav-previous">%s</div>', $prev_link );
 					endif;
 
-					if ( $next_link = get_next_comments_link( __( 'Newer Comments', 'bmus' ) ) ) :
+					if ( $next_link = get_next_comments_link( __( 'Newer Comments', 'ofits' ) ) ) :
 						printf( '<div class="nav-next">%s</div>', $next_link );
 					endif;
 				?>

@@ -19,14 +19,14 @@
 		<?php do_action( 'hatch_searchform_inner_before' ); ?>
 
 		<div class="small-8 columns">
-			<input type="text" value="" name="s" id="s" placeholder="<?php esc_attr_e( 'Search', 'bmus' ); ?>">
+			<input type="text" value="" name="s" id="s" placeholder="<?php esc_attr_e( 'Search', 'ofits' ); ?>">
 		</div>
 
 		<div class="small-4 columns">
 
 			<?php do_action( 'hatch_searchform_search_button_before' ); ?>
 
-			<input type="submit" id="searchsubmit" value="<?php esc_attr_e( 'Search', 'bmus' ); ?>" class="prefix button">
+			<input type="submit" id="searchsubmit" value="<?php esc_attr_e( 'Search', 'ofits' ); ?>" class="prefix button">
 
 			<?php do_action( 'hatch_searchform_search_button_after' ); ?>
 		</div>

@@ -742,7 +742,7 @@
 			</p>
 
 			<footer>
-				<?php wp_link_pages( array( 'before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'bmus' ), 'after' => '</p></nav>' ) ); ?>
+				<?php wp_link_pages( array( 'before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'ofits' ), 'after' => '</p></nav>' ) ); ?>
 				<p><?php the_tags(); ?></p>
 			</footer>
 

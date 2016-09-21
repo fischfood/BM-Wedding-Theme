@@ -9,11 +9,11 @@
 
 // If we don't have an object for our theme create it.
 
-if( typeof(bmwedding) == 'undefined' ) {
-    bmwedding = {};
+if( typeof(onlyfisch) == 'undefined' ) {
+    onlyfisch = {};
 }
 
-bmwedding.site = function ( $ ) {
+onlyfisch.site = function ( $ ) {
     // Private Variables
     var $window = $(window),
         $doc    = $(document),
@@ -49,5 +49,5 @@ bmwedding.site = function ( $ ) {
 } ( jQuery );
 
 jQuery(function( $ ) {
-    bmwedding.site.init();
+    onlyfisch.site.init();
 });

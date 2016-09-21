@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 		    ]
 	    },
 	    dist: {
-		    src: 'css/bmwedding.css'
+		    src: 'css/onlyfisch.css'
 	    }
     },
 
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
           sourceMap: true
         },
         files: {
-          'css/bmwedding.css': 'scss/app.scss',
+          'css/onlyfisch.css': 'scss/app.scss',
           'css/ie8.css': 'scss/ie8.scss',
           'css/admin-editor.css': 'scss/admin-editor.scss'
         }
@@ -59,7 +59,7 @@ module.exports = function(grunt) {
       },
       theme: {
         files: {
-            'js/bmwedding.min.js' : ['js/app.js', 'js/linchpin.js', 'js/bmwedding.js']
+            'js/onlyfisch.min.js' : ['js/app.js', 'js/linchpin.js', 'js/onlyfisch.js']
         }
       }
     },
@@ -93,9 +93,9 @@ module.exports = function(grunt) {
 
       theme: {
         src:[
-          'js/bmwedding/*.js'
+          'js/onlyfisch/*.js'
         ],
-        dest: 'js/bmwedding.js'
+        dest: 'js/onlyfisch.js'
       }
 
     },
@@ -112,8 +112,8 @@ module.exports = function(grunt) {
         files: [
           'js/foundation.min.js',
           'js/linchpin.js',
-          'js/bmwedding/*.js',
-          'js/bmwedding.js'
+          'js/onlyfisch/*.js',
+          'js/onlyfisch.js'
         ],
         tasks: ['concat', 'uglify']
       }

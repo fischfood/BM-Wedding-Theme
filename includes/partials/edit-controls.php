@@ -13,5 +13,5 @@
 ?>
 
 <ul class="button-group utility right">
-	<?php edit_post_link( __( 'Edit Content', 'bmus' ) , '<li class="tiny button">', '</li>' ); ?>
+	<?php edit_post_link( __( 'Edit Content', 'ofits' ) , '<li class="tiny button">', '</li>' ); ?>
 </ul>

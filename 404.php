@@ -24,11 +24,11 @@
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page cannot be found.', 'bmus' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'Oops! That page cannot be found.', 'ofits' ); ?></h1>
 				</header>
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'bmus' ); ?></p>
+					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'ofits' ); ?></p>
 
 					<?php get_search_form(); ?>
 
@@ -38,7 +38,7 @@
 
 						<?php if ( hatch_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 							<div class="widget widget_categories">
-								<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'bmus' ); ?></h2>
+								<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'ofits' ); ?></h2>
 								<ul>
 								<?php
 									wp_list_categories( array(
@@ -61,13 +61,13 @@
 						do_action( 'hatch_content_before' ); ?>
 
 						<div class="error">
-							<p class="bottom"><?php esc_html_e( 'The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.', 'bmus' ); ?></p>
+							<p class="bottom"><?php esc_html_e( 'The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.', 'ofits' ); ?></p>
 						</div>
-						<p><?php esc_html_e( 'Please try the following:', 'bmus' ); ?></p>
+						<p><?php esc_html_e( 'Please try the following:', 'ofits' ); ?></p>
 						<ul>
-							<li><?php esc_html_e( 'Check your spelling', 'bmus' ); ?></li>
-							<li><?php printf( wp_kses( __( 'Return to the <a href="%s">home page</a>', 'bmus' ), array( 'a' => array( 'href' ) ) ), esc_url( home_url() ) ); ?></li>
-							<li><?php printf( wp_kses( __( 'Click the <a href="%s">Back</a> button', 'bmus' ), array( 'a' => array( 'href' ) ) ), esc_attr( 'javascript:history.back();' ) ); ?></li>
+							<li><?php esc_html_e( 'Check your spelling', 'ofits' ); ?></li>
+							<li><?php printf( wp_kses( __( 'Return to the <a href="%s">home page</a>', 'ofits' ), array( 'a' => array( 'href' ) ) ), esc_url( home_url() ) ); ?></li>
+							<li><?php printf( wp_kses( __( 'Click the <a href="%s">Back</a> button', 'ofits' ), array( 'a' => array( 'href' ) ) ), esc_attr( 'javascript:history.back();' ) ); ?></li>
 						</ul>
 					</div>
 

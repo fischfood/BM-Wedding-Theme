@@ -18,8 +18,8 @@
 	hatch_pagination( '&laquo;', '&raquo;' );
 elseif ( is_paged() ) : ?>
 	<nav id="post-nav">
-		<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'bmus' ) ); ?></div>
-		<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'bmus' ) ); ?></div>
+		<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'ofits' ) ); ?></div>
+		<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'ofits' ) ); ?></div>
 	</nav>
 <?php endif; ?>
 

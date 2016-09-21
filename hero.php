@@ -19,7 +19,7 @@
 		</div>
 
 		<div class="medium-6 columns end">
-			<a class="download large button hide-for-small" href="https://github.com/linchpinagency/hatch"><?php esc_html_e( 'Download Hatch', 'bmus' ); ?></a>
+			<a class="download large button hide-for-small" href="https://github.com/linchpinagency/hatch"><?php esc_html_e( 'Download Hatch', 'ofits' ); ?></a>
 		</div>
 
 		<div class="floatingyeti show-for-medium-up">

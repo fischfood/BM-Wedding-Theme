@@ -27,7 +27,7 @@ do_action( 'hatch_post_before' ); ?>
 	do_action( 'hatch_post_entry_content_before' ); ?>
 
 	<div class="entry-content">
-		<?php the_content( __( 'Continue reading...', 'bmus' ) ); ?>
+		<?php the_content( __( 'Continue reading...', 'ofits' ) ); ?>
 	</div>
 
 	<?php

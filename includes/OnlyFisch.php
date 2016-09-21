@@ -1,13 +1,13 @@
 <?php
 /**
- * BM Wedding
+ * Only Fisch in the Sea
  *
  * @author Brian Fischer
- * @package BMWedding
+ * @package OnlyFisch
  *
  */
 
-class BMWedding {
+class OnlyFisch {
 
 	public $apple_favicon_sizes = array(
 		57,
@@ -78,7 +78,7 @@ class BMWedding {
 	 * @return void
 	 */
 	function admin_footer_text() {
-		echo 'Powered by <a href="http://www.wordpress.org" target="_blank">WordPress</a> | Created by <a href="brianfischer.me/?utm_source=hatch&utm_medium=hatch_footer&utm_campaign=hatch_notice" target="_blank">Brian Fischer</a> and augmented by the <a href="http://github.com/linchpinagency/hatch/?utm_source=hatch&utm_medium=hatch_footer&utm_campaign=hatch_notice" target="_blank">Hatch</a>';
+		echo 'Powered by <a href="http://www.wordpress.org" target="_blank">WordPress</a> | Created by <a href="http://brianfischer.me/?utm_source=hatch&utm_medium=hatch_footer&utm_campaign=hatch_notice" target="_blank">Brian Fischer</a> and augmented by the <a href="http://github.com/linchpinagency/hatch/?utm_source=hatch&utm_medium=hatch_footer&utm_campaign=hatch_notice" target="_blank">Hatch</a>';
 	}
 
 	/**
@@ -202,9 +202,9 @@ class BMWedding {
 	function wp_enqueue_scripts() {
         $postfix = ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ? '' : '.min';
 
-        wp_enqueue_script( 'modernizr',  get_stylesheet_directory_uri() . '/js/modernizr/modernizr' . $postfix . '.js', array(), BMUS_VERSION, false );
-		wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/js/app' . $postfix . '.js', array('jquery'), BMUS_VERSION, true );
-		wp_enqueue_script( 'bmwedding', 	 get_stylesheet_directory_uri() . '/js/bmwedding' . $postfix . '.js', array( 'jquery' ), BMUS_VERSION, true );
+        wp_enqueue_script( 'modernizr',  get_stylesheet_directory_uri() . '/js/modernizr/modernizr' . $postfix . '.js', array(), OFITS_VERSION, false );
+		wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/js/app' . $postfix . '.js', array('jquery'), OFITS_VERSION, true );
+		wp_enqueue_script( 'onlyfisch', 	 get_stylesheet_directory_uri() . '/js/onlyfisch' . $postfix . '.js', array( 'jquery' ), OFITS_VERSION, true );
 	}
 
 	/**
@@ -214,7 +214,7 @@ class BMWedding {
 	 * @return void
 	 */
 	function wp_enqueue_styles() {
-		wp_enqueue_style( 'app-css', get_stylesheet_directory_uri() . '/css/bmwedding.css' );
+		wp_enqueue_style( 'app-css', get_stylesheet_directory_uri() . '/css/onlyfisch.css' );
 	}
 
 	/**
@@ -250,14 +250,14 @@ class BMWedding {
 	function customize_register ( $wp_customize ) {
 
 		$wp_customize->add_section (
-			'bmwedding_logo', array(
-				'title' 	=> __('Site Logo', 'bmwedding'),
+			'onlyfisch_logo', array(
+				'title' 	=> __('Site Logo', 'onlyfisch'),
 				'priority' 	=> 80,
 			)
 		);
 
 		$wp_customize->add_setting (
-			'bmwedding_theme_options[logo_upload]', array(
+			'onlyfisch_theme_options[logo_upload]', array(
 				'default'		=> get_stylesheet_directory_uri() . '/assets/images/linchpin-icon-white.svg',
 				'capability' 	=> 'edit_theme_options',
 				'type'			=> 'option',
@@ -266,9 +266,9 @@ class BMWedding {
 
 		$wp_customize->add_control (
 			new WP_Customize_Image_Control( $wp_customize, 'logo_upload', array (
-				'label'		=> __('Site Logo', 'bmwedding'),
-				'section' 	=> 'bmwedding_logo',
-				'settings' 	=> 'bmwedding_theme_options[logo_upload]',
+				'label'		=> __('Site Logo', 'onlyfisch'),
+				'section' 	=> 'onlyfisch_logo',
+				'settings' 	=> 'onlyfisch_theme_options[logo_upload]',
 				'extensions'	=> array( 'jpg', 'jpeg', 'png', 'gif', 'svg' ),
 			) )
 		);

@@ -15,7 +15,7 @@
  */
 
 // Useful global constants
-define( 'BMUS_VERSION', '' );
+define( 'OFITS_VERSION', '' );
 
 if ( ! defined( 'SCRIPT_DEBUG' ) ) {
 	define( 'SCRIPT_DEBUG', true ); // enable script debug by default
@@ -23,10 +23,10 @@ if ( ! defined( 'SCRIPT_DEBUG' ) ) {
 
 include_once( 'includes/Linchpin/hatch.php' );        // Hatch Classes
 include_once( 'includes/Foundation/foundation.php' ); // Foundation Classes
-include_once( 'includes/BMWedding.php' ); // Theme Class
+include_once( 'includes/OnlyFisch.php' ); // Theme Class
 
 /**
  *	Instantiate our classes.
  */
 
-$theme = new BMWedding();
+$theme = new OnlyFisch();

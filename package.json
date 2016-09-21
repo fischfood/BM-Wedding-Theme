@@ -1,13 +1,13 @@
 {
-  "name": "bm-wedding",
-  "title": "BM Wedding",
-  "description": "Brian and Michelle Wedding Theme",
+  "name": "only-fisch-in-the-sea",
+  "title": "Only Fisch in the Sea",
+  "description": "Brian and Michelle\\'s Wedding Theme",
   "version": "0.1.0",
-  "homepage": "brianandmichelle.us",
+  "homepage": "http://brianandmichelle.us",
   "author": {
     "name": "Brian Fischer",
     "email": "fischfooddesigns@gmail.com",
-    "url": "brianfischer.me"
+    "url": "http://brianfischer.me"
   },
   "devDependencies": {
     "autoprefixer": "^6.1.2",

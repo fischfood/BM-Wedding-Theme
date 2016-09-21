@@ -14,7 +14,7 @@
 	<div class="row">
 	<div class="small-12 large-8 columns" role="main">
 
-		<h2><?php esc_html_e( 'Search Results for', 'bmus' ); ?>
+		<h2><?php esc_html_e( 'Search Results for', 'ofits' ); ?>
 			"<?php esc_html_e( get_search_query() ); ?>"</h2>
 
 		<?php
