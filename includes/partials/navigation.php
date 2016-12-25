@@ -12,7 +12,7 @@
 
 ?>
 <?php
-$options = get_option( 'onlyfisch_theme_options' );
+$options = get_option( 'onlyfischinthesea_theme_options' );
 
 if ( isset( $options['logo_upload'] ) ) {
 	$logo = true;

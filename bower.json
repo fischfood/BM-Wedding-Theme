@@ -1,6 +1,6 @@
 {
   "name": "hatch-libsass-template",
-  "dependencies": {
-    "foundation": "zurb/bower-foundation"
+  "devDependencies": {
+    "foundation-sites": "~6.1.2"
   }
 }

@@ -23,10 +23,10 @@ if ( ! defined( 'SCRIPT_DEBUG' ) ) {
 
 include_once( 'includes/Linchpin/hatch.php' );        // Hatch Classes
 include_once( 'includes/Foundation/foundation.php' ); // Foundation Classes
-include_once( 'includes/OnlyFisch.php' ); // Theme Class
+include_once( 'includes/OnlyFischintheSea.php' ); // Theme Class
 
 /**
  *	Instantiate our classes.
  */
 
-$theme = new OnlyFisch();
+$theme = new OnlyFischintheSea();
