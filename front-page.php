@@ -14,21 +14,9 @@
 ?>
 
 <?php get_header(); ?>
-
-	<?php get_template_part( 'hero' ); ?>
-
-	<?php if ( function_exists( 'lphive_promo_slider' ) ) : ?>
-		<div class="row">
-			<?php lphive_promo_slider(); ?>
-		</div>
-	<?php endif; ?>
-
-	<div class="row cta">
-		<?php dynamic_sidebar( 'home-widgets' ); ?>
-	</div>
-
-	<div class="row">
-		<div class="small-12 large-8 columns" role="main">
+	
+	<div class="row extend">
+		<div class="small-12" role="main">
 
 			<?php do_action( 'hatch_content_before' ); ?>
 

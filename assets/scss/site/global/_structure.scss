@@ -23,6 +23,12 @@
  * ----------------------------------------------------------------------------
  */
 
+ .row {
+ 	.extend {
+ 		max-width: 100%;
+ 	}
+ }
+
 
 // Reset margin and padding on figure element
 figure {
