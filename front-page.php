@@ -13,6 +13,12 @@
 
 ?>
 
+<?php if ( !is_user_logged_in() ): ?>
+
+	<?php get_template_part('temp-front'); ?>
+
+<?php else: ?>
+
 <?php get_header(); ?>
 	
 	<div class="row extend">
@@ -52,3 +58,5 @@
 	<?php get_sidebar(); ?>
 </div>
 <?php get_footer();
+
+endif; ?>
