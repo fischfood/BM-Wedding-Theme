@@ -19,7 +19,7 @@ gulp.task( 'scripts', function() {
 gulp.task( 'sass', function() {
 	return gulp.src('./assets/scss/**/*.scss')
 		.pipe( sass({
-			outputStyle: 'compressed'
+			outputStyle: 'normal'
 		}).on('error', sass.logError))
 		.pipe( gulp.dest('./css') );
 } );

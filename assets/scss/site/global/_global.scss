@@ -1,5 +1,231 @@
+/* ---------------------------------------------------------------------
+ * G00 - Imports and Lists
+ * G01 - Heights / Padding / Margins
+ * G02 - Backgrounds and Colors
+ * G03 - Background Positioning
+ -------------------------------------------------------------------- */
+
 @import 'structure';
 @import 'header';
 @import 'archive';
 @import 'single';
 @import 'footer';
+
+$direction-list: top, right, down, left;
+
+/* ---------------------------------------------------------------------
+ * G01 - Heights / Padding / Margins
+ -------------------------------------------------------------------- */
+
+.padding {
+	padding: 2rem;
+}
+
+.small-padding {
+	padding: 1rem;
+}
+
+.large-padding {
+	padding: 4rem;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.vertical-padding {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.small-vertical-padding {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.large-vertical-padding {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+.horizontal-padding {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.small-horizontal-padding {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.large-horizontal-padding {
+	padding-left: 4rem;
+	padding-right: 4rem;
+}
+
+@each $direction in $direction-list {
+    .no-padding-#{$direction} { 
+        padding-#{$direction}: 0rem;
+    }
+
+    .small-padding-#{$direction} { 
+        padding-#{$direction}: 1rem;
+    }
+
+    .padding-#{$direction} { 
+        padding-#{$direction}: 2rem;
+    }
+
+    .large-padding-#{$direction} { 
+        padding-#{$direction}: 4rem;
+    }    
+}
+
+.no-margin {
+	margin: 0;
+}
+
+@each $direction in $direction-list {
+	
+	.no-margin-#{$direction} { 
+        margin-#{$direction}: 0rem;
+    }
+
+	.small-margin-#{$direction} { 
+        margin-#{$direction}: 1rem;
+    }
+
+    .margin-#{$direction} { 
+        margin-#{$direction}: 2rem;
+    }
+
+    .large-margin-#{$direction} { 
+        margin-#{$direction}: 4rem;
+    }
+}
+
+@for $i from 1 through 10 {
+	.min-height-#{$i * 50} {
+		min-height: #{$i * 50}px;
+	}
+
+	.min-height-#{$i * 10}vh {
+		min-height: #{$i * 10}vh;
+	}
+
+	.height-#{$i * 50} {
+		height: #{$i * 50}px;
+	}
+
+	.height-#{$i * 10}vh {
+		height: #{$i * 10}vh;
+	}
+}
+
+.table, .table-full {
+	display: table;
+
+	> .vertical {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	> .bottom {
+		display: table-cell;
+		vertical-align: bottom;
+	}
+
+}
+
+.table-full {
+	width: 100%;
+}
+
+/* ---------------------------------------------------------------------
+ * G03 - Backgrounds and Colors
+ -------------------------------------------------------------------- */
+
+ .color-white {
+ 	color: $white;
+ }
+
+/* ---------------------------------------------------------------------
+ * G03 - Background Positioning
+ -------------------------------------------------------------------- */
+
+.background-cover {
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.background-fixed {
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.background-parallax {
+	background-size: cover;
+}
+
+.background-repeat {
+	background-repeat: repeat;
+}
+
+.background-top {
+	background-position-y: top;
+}
+
+.background-right {
+	background-position-x: right;
+}
+
+.background-bottom {
+	background-position-y: bottom;
+}
+
+.background-left {
+	background-position-x: left;
+}
+
+.background-center {
+	background-position: center center;
+}
+
+.background-center-vertical, .background-vertical {
+	background-position-y: center;
+}
+
+.background-center-horizontal, .background-horizontal {
+	background-position-x: center;
+}
+
+.background-overlay, .background-overlay-light {
+	position: relative;
+
+	&:before {
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		z-index: 1;
+		top: 0;
+		left: 0;
+	}
+
+	> * {
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.background-overlay {
+	&:before {
+		background-color: rgba($black, .3);
+	}
+}
+
+.background-overlay-light {
+	&:before {
+		background-color: rgba($white, .3);
+	}
+}
