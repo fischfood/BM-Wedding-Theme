@@ -38,3 +38,20 @@ onlyfischinthesea.site = function ( $ ) {
 jQuery(function( $ ) {
     onlyfischinthesea.site.init();
 });
+
+var kkeys = [], olive = "84,65,80,65,78,65,68,69";
+
+$(document).keydown(function(e) {
+
+  kkeys.push( e.keyCode );
+
+  if ( kkeys.toString().indexOf( olive ) >= 0 ) {
+
+    $(document).unbind('keydown',arguments.callee);
+    
+    // do something awesome
+    alert('Hi!');
+  
+  }
+
+});
