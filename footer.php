@@ -76,5 +76,7 @@
 		 */
 		/** This action is documented in includes/Linchpin/hatch-hooks.php */
 		do_action( 'hatch_body_before_close' ); ?>
+
+		<?php if ( !is_user_logged_in() ): ?></div><?php endif; ?>
 	</body>
 </html>

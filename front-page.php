@@ -14,10 +14,12 @@
 ?>
 
 <?php if ( !is_user_logged_in() ): ?>
+	<div class="olive">
 
-	<?php get_template_part('temp-front'); ?>
+		<?php get_template_part('temp-front'); ?>
 
-<?php else: ?>
+	</div>
+<?php endif; ?>
 
 <?php get_header(); ?>
 	
@@ -57,6 +59,6 @@
 
 	<?php get_sidebar(); ?>
 </div>
-<?php get_footer();
+<?php get_footer(); ?>
 
-endif; ?>
+

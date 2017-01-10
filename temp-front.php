@@ -7,20 +7,20 @@
 
 
 	<style>
-		body {
-    height: 100vh;
-    width: 100vw;
-    background:url('/wp-content/themes/onlyfischinthesea/leaves/bg_blur.jpg');
-    background-position: center center;
-    background-size: 100%;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+	.olive-back-show body {
+        height: 100vh;
+        width: 100vw;
+        background:url('/wp-content/themes/onlyfischinthesea/leaves/bg_blur.jpg');
+        background-position: center center;
+        background-size: 100%;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
 
-}
+    }
 
-html {
+html.olive-back-show {
 	overflow: hidden;
 	height: 100vh;
 	width: 100vw;

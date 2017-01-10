@@ -34,8 +34,40 @@ onlyfischinthesea.site = function ( $ ) {
 
 	        // initialize foundation
 	        $doc.foundation();
+
+          self.addEvents();
+
+        },
+
+        addEvents : function () {
+
+          if ( $body.length ) {
+            self.oliveUnlock();
+          }
+
+        },
+
+        oliveUnlock : function () {
+          var kkeys = [], olive = "84,65,80,65,78,65,68,69";
+
+          $(document).keydown(function(e) {
+
+            kkeys.push( e.keyCode );
+
+            if ( kkeys.toString().indexOf( olive ) >= 0 ) {
+
+              $(document).unbind('keydown',arguments.callee);
+              
+              // do something awesome
+              $('.olive').toggleClass('hide');
+              $('.olive-back').toggleClass('olive-back-show');
+            
+            }
+
+          });
         }
     };
+
 } ( jQuery );
 
 jQuery(function( $ ) {
