@@ -56,7 +56,7 @@ if ( isset( $options['logo_upload'] ) ) {
 
 <div id="main-menu" class="top-bar-container" data-parent="<?php esc_attr_e( $post->post_type ); ?>">
 	<nav class="top-bar" data-topbar="">
-		<ul class="title-area">
+		<!-- <ul class="title-area">
 			<li class="name">
 				<a href="<?php esc_attr_e( home_url() ); ?>">
 					<?php if ( ! empty( $logo ) ) : ?>
@@ -67,7 +67,7 @@ if ( isset( $options['logo_upload'] ) ) {
 					<?php endif; ?>
 				</a>
 			</li>
-		</ul>
+		</ul> -->
 
 		<section class="top-bar-section show-for-medium-up">
 			<?php

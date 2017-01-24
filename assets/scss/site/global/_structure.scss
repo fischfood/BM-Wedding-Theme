@@ -105,3 +105,10 @@ img {
 		margin-top: rem-calc(60);
 	}
 }
+
+ul.inline {
+	text-align: center;
+	li {
+		display: inline-block;
+	}
+}

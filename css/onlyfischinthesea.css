@@ -25,6 +25,7 @@
    * 2. Prevent iOS and IE text size adjust after device orientation change,
    *    without disabling user zoom.
    */
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes|Raleway:400,500,600,700");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -390,7 +391,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Raleway", "proxima-nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
   color: #0a0a0a;
@@ -1219,7 +1220,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Great Vibes", "Raleway", "proxima-nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   color: inherit;
@@ -3282,12 +3283,30 @@ table.hover tr:nth-of-type(even):hover {
 @include foundation-tooltip;
 @include foundation-top-bar;
 */
+/* Instagram */
+.wdi_feed_main_container .wdi_photo_wrap {
+  display: block !important;
+  padding: 0 !important;
+  width: 100% !important; }
+
 /* ---------------------------------------------------------------------
  * G00 - Imports and Lists
  * G01 - Heights / Padding / Margins
  * G02 - Backgrounds and Colors
  * G03 - Background Positioning
+ * G03 - Icons and Section Titles
  -------------------------------------------------------------------- */
+.pulse {
+  animation: pulse 1s linear infinite; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.1); }
+  50% {
+    transform: scale(0.8); }
+  100% {
+    transform: scale(1); } }
+
 /**
  * Table of Contents for FoundationPress:
  *
@@ -3361,9 +3380,30 @@ img.alignright {
   footer.row {
     margin-top: 3.75rem; } }
 
+ul.inline {
+  text-align: center; }
+  ul.inline li {
+    display: inline-block; }
+
 .top-bar-container {
   margin-bottom: 0; }
 
+nav.top-bar {
+  background-color: #fefefe; }
+  nav.top-bar .top-bar-section > ul {
+    background-color: #fefefe;
+    margin-bottom: 0;
+    text-align: center; }
+    nav.top-bar .top-bar-section > ul > li {
+      display: inline-block; }
+      nav.top-bar .top-bar-section > ul > li > a {
+        color: #0a0a0a;
+        display: block;
+        padding: 1rem;
+        text-transform: uppercase;
+        font-weight: 500; }
+
+/* Hero */
 ol.commentlist {
   list-style: none;
   margin: 0 0 1.25rem; }
@@ -3399,7 +3439,7 @@ ol.commentlist {
 /* ---------------------------------------------------------------------
  * G01 - Heights / Padding / Margins
  -------------------------------------------------------------------- */
-.padding {
+.padding-all {
   padding: 2rem; }
 
 .small-padding {
@@ -3730,21 +3770,24 @@ ol.commentlist {
 .background-overlay-light:before {
   background-color: rgba(254, 254, 254, 0.3); }
 
-#homepage-hero {
-  background: url("http://foundation.zurb.com/assets/img/marquee-stars.svg") repeat scroll 0 0 #074E68;
-  padding: 1.25rem 0;
-  margin: -2rem 0 2rem;
-  position: relative;
-  text-align: left;
-  height: auto; }
-  #homepage-hero h1 a, #homepage-hero h4 {
-    color: #fff; }
-  #homepage-hero .floatingyeti img {
-    max-width: 30%;
-    position: absolute;
-    right: 6.25rem; }
-  #homepage-hero .download {
-    margin-top: 1.25rem; }
+/* ---------------------------------------------------------------------
+ * G01 - Icons and Section Titles
+ -------------------------------------------------------------------- */
+.section-icon {
+  text-align: center; }
 
-.row.cta {
-  margin-bottom: 2.5rem; }
+.section-title {
+  display: inline-block;
+  position: relative;
+  text-align: center; }
+  .section-title:before, .section-title:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    width: 50px;
+    background: #dbdbdb; }
+  .section-title:before {
+    left: -65px; }
+  .section-title:after {
+    right: -65px; }

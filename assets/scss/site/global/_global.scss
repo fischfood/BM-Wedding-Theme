@@ -3,8 +3,10 @@
  * G01 - Heights / Padding / Margins
  * G02 - Backgrounds and Colors
  * G03 - Background Positioning
+ * G03 - Icons and Section Titles
  -------------------------------------------------------------------- */
 
+@import 'animations';
 @import 'structure';
 @import 'header';
 @import 'archive';
@@ -17,7 +19,7 @@ $direction-list: top, right, down, left;
  * G01 - Heights / Padding / Margins
  -------------------------------------------------------------------- */
 
-.padding {
+.padding-all {
 	padding: 2rem;
 }
 
@@ -229,3 +231,34 @@ $direction-list: top, right, down, left;
 		background-color: rgba($white, .3);
 	}
 }
+
+/* ---------------------------------------------------------------------
+ * G01 - Icons and Section Titles
+ -------------------------------------------------------------------- */
+
+ .section-icon {
+ 	text-align: center;
+ }
+
+ .section-title {
+ 	display: inline-block;
+ 	position: relative;
+ 	text-align: center;
+
+ 	&:before, &:after {
+ 		content: "";
+ 		position: absolute;
+ 		top: 50%;
+ 		height: 1px;
+ 		width: 50px;
+ 		background: $color-gray;
+ 	}
+
+ 	&:before {
+ 		left: -65px;
+ 	}
+
+ 	&:after {
+ 		right: -65px;
+ 	}
+ }

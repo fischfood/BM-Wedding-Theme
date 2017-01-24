@@ -22,6 +22,8 @@
 
     <?php wp_head(); ?>
 
+    <script src="https://use.fontawesome.com/22e34590d1.js"></script>
+
 	<?php
 	/** This action is documented in includes/Linchpin/hatch-hooks.php */
 	do_action( 'hatch_head_scripts' ); ?>
