@@ -45,7 +45,7 @@
 // $global-font-size: 100%;
 // $global-width: rem-calc(1200);
 // $global-lineheight: 1.5;
-// $primary-color: #c60c31;
+$primary-color: #F7941E; //#c60c31;
 // $secondary-color: #69c0c9;
 // $success-color: #3adb76;
 // $warning-color: #ffae00;
@@ -57,7 +57,7 @@
 // $white: #fefefe;
 // $body-background: $white;
 // $body-font-color: $black;
-$body-font-family: "Raleway", "proxima-nova", 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: "Nunito", "proxima-nova", 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 // $body-antialiased: true;
 // $global-margin: 1rem;
 // $global-padding: 1rem;
@@ -93,7 +93,7 @@ $body-font-family: "Raleway", "proxima-nova", 'Helvetica Neue', Helvetica, Robot
 // 4. Base Typography
 // ------------------
 
-$header-font-family: "Great Vibes", $body-font-family;
+$header-font-family: "Slabo 27px", $body-font-family;
 // $header-font-weight: 700;
 // $header-font-style: normal;
 // $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;

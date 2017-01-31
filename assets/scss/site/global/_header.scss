@@ -4,24 +4,61 @@
 
 nav.top-bar {
 	background-color: $white;
+	box-shadow: 0px 0px 1rem rgba($black,.5);
+	position: fixed;
+	width: 100%;
+	z-index: 1060;
+
 	.top-bar-section {
 		> ul {
 			background-color: $white;
-			margin-bottom: 0;
+			margin: 0;
 			text-align: center;
 
 			> li {
 				display: inline-block;
+				position: relative;
 
 				> a {
 					color: $black;
 					display: block;
-					padding: 1rem;
-					text-transform: uppercase;
+					font-family: $header-font-family;
+					font-size: 1.125rem;
 					font-weight: 500;
+					margin-top: -1px;
+					padding: 1rem;
+					position: relative;
+					text-transform: uppercase;
+
+					&:before {
+						content: "/";
+						position: absolute;
+						left: -5px;
+						color: $black;
+					}
+
+					&.active-anchor {
+						color: $primary-color;
+					}
+				}
+
+				&:hover, &:active, &.active {
+					a {
+						color: darken( $primary-color, 5%);
+					}
+				}
+
+				&:first-of-type {
+					a:before {
+						display: none;
+					}
 				}
 			}
 		}
+	}
+
+	+ .top-bar-spacer {
+		height: 4.6875rem;
 	}
 }
 

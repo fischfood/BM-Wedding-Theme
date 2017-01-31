@@ -88,4 +88,6 @@ if ( isset( $options['logo_upload'] ) ) {
 			?>
 		</section>
 	</nav>
+
+	<div class="top-bar-spacer"></div>
 </div>

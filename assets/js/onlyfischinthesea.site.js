@@ -18,6 +18,7 @@ onlyfischinthesea.site = function ( $ ) {
     var $window    = $(window),
         $doc       = $(document),
         $body      = $('body'),
+        $curActiveAnchor = '',
         self;
 
     return {
@@ -42,6 +43,11 @@ onlyfischinthesea.site = function ( $ ) {
             self.oliveUnlock();
           }
 
+          $body
+            .on('click', '.top-bar-menu a', self.smoothScrolling );
+
+          $window.scroll( self.scrollActive );
+
         },
 
         oliveUnlock : function () {
@@ -62,6 +68,43 @@ onlyfischinthesea.site = function ( $ ) {
             }
 
           });
+        },
+
+        smoothScrolling : function () {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $( $.attr(this, 'href') ).offset().top - 105
+            }, 500);
+        },
+
+        scrollActive : function () {
+
+          var $activeAnchorNum = 0; // At Bottom of Window
+              $scrollTop = $window.scrollTop(),
+              $winHeight = $window.height();
+
+          $('.top-bar-menu li.is-anchor a').each( function() {
+
+            var $attrOffset = $( $.attr(this, 'href') ).offset().top,
+                $attrAtBottom = $attrOffset - ( $scrollTop + $winHeight );
+
+            if ( $attrAtBottom <= $activeAnchorNum  ) {
+              $activeAnchor = $.attr(this, 'href');
+            }
+
+          });
+
+          if ( $curActiveAnchor != $activeAnchor ) {
+
+            $('.top-bar-menu li.is-anchor a').removeClass('active-anchor');
+
+            $( 'a[href="' + $activeAnchor + '"]' ).addClass('active-anchor');
+
+          }
+
+          $curActiveAnchor = $activeAnchor;
+
         }
     };
 

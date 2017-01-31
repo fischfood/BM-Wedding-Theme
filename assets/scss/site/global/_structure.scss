@@ -35,7 +35,7 @@
  	.row {
  		margin: 0;
  	}
- }
+}
 
 
 // Reset margin and padding on figure element
@@ -103,6 +103,15 @@ img {
 @media #{$medium-up} {
 	footer.row {
 		margin-top: rem-calc(60);
+	}
+}
+
+.relative, .anchor-box-container {
+	position: relative;
+
+	.anchor-box {
+		position: absolute;
+		top: 0;
 	}
 }
 
