@@ -7,3 +7,11 @@
 		width: 100% !important;
 	}
 }
+
+/* Mesh */
+
+.has-parallax {
+	> .row {
+		box-shadow: inset 0px 0px 10rem rgba($black, .6);
+	}
+}

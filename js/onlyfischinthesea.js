@@ -44,10 +44,20 @@ onlyfischinthesea.site = function ( $ ) {
 
           if ( $body.length ) {
             self.oliveUnlock();
+            self.modalAddClose();
+          }
+
+          if ( $('.modal').length ) {
+            self.modalPositioning();
+
+            $window.on('resize', self.modalPositioning );
           }
 
           $body
-            .on('click', '.top-bar-menu a', self.smoothScrolling );
+            .on('click', '.top-bar-menu a', self.smoothScrolling )
+            .on('click', '.song-form-trigger', self.songForm )
+            .on('click', '.pie-form-trigger', self.pieForm )
+            .on('click', '.modal-overlay, .modal-close', self.closeModal );
 
           $window.scroll( self.scrollActive );
 
@@ -70,6 +80,21 @@ onlyfischinthesea.site = function ( $ ) {
             
             }
 
+          });
+        },
+
+        modalAddClose : function () {
+          $('.modal').prepend(' <div class="modal-close">&#10005;</div>');
+        },
+
+        modalPositioning : function () {
+          $('.modal').each( function() {
+            var $height = $(this).outerHeight(),
+                $width = $(this).outerWidth();
+
+                console.log( $height + ' - ' + $width );
+
+            $(this).css('marginTop', $height * -0.5 ).css('marginLeft', $width * -0.5 );
           });
         },
 
@@ -108,6 +133,21 @@ onlyfischinthesea.site = function ( $ ) {
 
           $curActiveAnchor = $activeAnchor;
 
+        },
+
+        songForm : function () {
+          $('.song-form-modal').addClass('active');
+          $('body').addClass('modal-active');
+        },
+
+        pieForm : function () {
+          $('.pie-form-modal').addClass('active');
+          $('body').addClass('modal-active');
+        },
+
+        closeModal : function () {
+          $('.modal').removeClass('active');
+          $('body').removeClass('modal-active');
         }
     };
 

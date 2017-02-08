@@ -116,8 +116,11 @@ img {
 }
 
 ul.inline {
+	font-size: 0;
 	text-align: center;
+
 	li {
 		display: inline-block;
+		font-size: 1rem;
 	}
 }

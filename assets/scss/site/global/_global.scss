@@ -1,9 +1,11 @@
 /* ---------------------------------------------------------------------
  * G00 - Imports and Lists
  * G01 - Heights / Padding / Margins
- * G02 - Backgrounds and Colors
+ * G02 - Backgrounds, Colors, and Borders
  * G03 - Background Positioning
- * G03 - Icons and Section Titles
+ * G04 - Icons and Section Titles
+ * G05 - Buttons
+ * G06 - Modals
  -------------------------------------------------------------------- */
 
 @import 'animations';
@@ -13,7 +15,7 @@
 @import 'single';
 @import 'footer';
 
-$direction-list: top, right, down, left;
+$direction-list: top, right, bottom, left;
 
 /* ---------------------------------------------------------------------
  * G01 - Heights / Padding / Margins
@@ -144,11 +146,30 @@ $direction-list: top, right, down, left;
 }
 
 /* ---------------------------------------------------------------------
- * G03 - Backgrounds and Colors
+ * G02 - Backgrounds, Colors, and Borders
  -------------------------------------------------------------------- */
 
  .color-white {
  	color: $white;
+ }
+
+ @each $direction in $direction-list {
+ 	.border-#{$direction} {
+ 		border-#{$direction}: 1px solid $dark-gray;
+ 	}
+
+ 	@media #{$medium-up} {
+ 		.border-#{$direction}-desktop {
+	 		border-#{$direction}: 1px solid $dark-gray;
+	 	}
+ 	}
+
+ 	@media #{$small-only} {
+ 		.border-#{$direction}-mobile {
+	 		border-#{$direction}: 1px solid $dark-gray;
+	 	}
+ 	}
+
  }
 
 /* ---------------------------------------------------------------------
@@ -233,32 +254,90 @@ $direction-list: top, right, down, left;
 }
 
 /* ---------------------------------------------------------------------
- * G01 - Icons and Section Titles
+ * G04 - Icons and Section Titles
  -------------------------------------------------------------------- */
 
  .section-icon {
+ 	font-size: 3.75rem;
  	text-align: center;
+ 	text-shadow: 0px 2px 5px rgba($black, .75);
  }
 
  .section-title {
- 	display: inline-block;
- 	position: relative;
+ 	display: block;
+ 	text-align: center;
+ 	text-shadow: 0px 2px 5px rgba($black, .75);
+ }
+
+ .form-icon {
+ 	font-size: 5rem;
  	text-align: center;
 
- 	&:before, &:after {
- 		content: "";
- 		position: absolute;
- 		top: 50%;
- 		height: 1px;
- 		width: 50px;
- 		background: $color-gray;
- 	}
-
  	&:before {
- 		left: -65px;
- 	}
-
- 	&:after {
- 		right: -65px;
+ 		color: $secondary-color;
  	}
  }
+
+ .intro-top-line, .intro-bottom-line {
+ 	
+ }
+
+ /* ---------------------------------------------------------------------
+ * G05 - Buttons
+  -------------------------------------------------------------------- */
+
+ button, .button {
+ 	text-transform: uppercase;
+ }
+
+
+ /* ---------------------------------------------------------------------
+ * G06 - Modals
+  -------------------------------------------------------------------- */
+
+.modal {
+	//display: none;
+	opacity: 0;
+	position: fixed;
+	background: $white;
+	height: auto;
+	min-width: 50%;
+	box-shadow: 0px 0px 20px $white, 0px 0px 10px $black;
+	top: 50%;
+	left: 50%;
+	//transform: translate(-50%,-50%); //Causes Blurry Type
+	padding: 4rem;
+
+	z-index: -10142017;
+
+	&.active {
+		display: block;
+		opacity: 1;
+		z-index: 10142017;
+	}
+
+	.modal-close {
+		position: absolute;
+		top: .5rem;
+		right: .75rem;
+		cursor: pointer;
+	}
+}
+
+.modal-overlay {
+	display: none;
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	background: rgba($white, .6);
+
+	z-index: 101417;
+
+	body.modal-active & {
+		display: block;
+	}
+}
+
+body.modal-active {
+	overflow: hidden;
+}

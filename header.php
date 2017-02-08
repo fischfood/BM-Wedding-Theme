@@ -39,6 +39,8 @@
 <div class="off-canvas-wrap" data-offcanvas>
 	<div class="inner-wrap">
 
+		<div class="modal-overlay"></div>
+
 		<?php
 		/** This action is documented in includes/Linchpin/hatch-hooks.php */
 		do_action( 'hatch_layout_start' ); ?>
