@@ -3901,6 +3901,34 @@ ol.commentlist {
   .form-icon:before {
     color: #FBCB8F; }
 
+.intro-top-line, .intro-bottom-line {
+  display: block;
+  position: relative;
+  text-align: center;
+  width: 320px; }
+  .intro-top-line:before, .intro-top-line:after, .intro-bottom-line:before, .intro-bottom-line:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 320px;
+    background: #fefefe;
+    top: 50%; }
+
+.intro-top-line i {
+  font-size: 2rem; }
+
+.intro-top-line:before {
+  left: 60%; }
+
+.intro-top-line:after {
+  right: 60%; }
+
+.intro-bottom-line:before {
+  left: 72.5%; }
+
+.intro-bottom-line:after {
+  right: 72.5%; }
+
 /* ---------------------------------------------------------------------
  * G05 - Buttons
   -------------------------------------------------------------------- */

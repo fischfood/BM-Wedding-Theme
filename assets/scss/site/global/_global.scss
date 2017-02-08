@@ -279,7 +279,41 @@ $direction-list: top, right, bottom, left;
  }
 
  .intro-top-line, .intro-bottom-line {
- 	
+ 	display: block;
+ 	position: relative;
+ 	text-align: center;
+ 	width: 320px;
+
+ 	&:before, &:after {
+ 		content: "";
+ 		position: absolute;
+ 		height: 1px;
+ 		width: 320px;
+ 		background: $white;
+ 		top: 50%;
+ 	}
+ }
+
+ .intro-top-line {
+ 	i {
+ 		font-size: 2rem;
+ 	}
+
+ 	&:before {
+ 		left: 60%;
+ 	}
+ 	&:after {
+ 		right: 60%;
+ 	}
+ }
+
+ .intro-bottom-line {
+ 	&:before {
+ 		left: 72.5%;
+ 	}
+ 	&:after {
+ 		right: 72.5%;
+ 	}
  }
 
  /* ---------------------------------------------------------------------
