@@ -44,12 +44,6 @@ onlyfischinthesea.site = function ( $ ) {
             self.modalAddClose();
           }
 
-          if ( $('.modal').length ) {
-            self.modalPositioning();
-
-            $window.on('resize', self.modalPositioning );
-          }
-
           $body
             .on('click', '.top-bar-menu a', self.smoothScrolling )
             .on('click', '.song-form-trigger', self.songForm )
@@ -82,17 +76,6 @@ onlyfischinthesea.site = function ( $ ) {
 
         modalAddClose : function () {
           $('.modal').prepend(' <div class="modal-close">&#10005;</div>');
-        },
-
-        modalPositioning : function () {
-          $('.modal').each( function() {
-            var $height = $(this).outerHeight(),
-                $width = $(this).outerWidth();
-
-                console.log( $height + ' - ' + $width );
-
-            $(this).css('marginTop', $height * -0.5 ).css('marginLeft', $width * -0.5 );
-          });
         },
 
         smoothScrolling : function () {
