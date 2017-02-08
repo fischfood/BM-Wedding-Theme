@@ -17,7 +17,7 @@
 				/** This action is documented in includes/Linchpin/hatch-hooks.php */
 				do_action( 'hatch_footer_before' ); ?>
 
-				<footer class="row">
+				<footer>
 
 					<?php
 					/** This action is documented in includes/Linchpin/hatch-hooks.php */
@@ -28,25 +28,6 @@
 					<?php
 					/** This action is documented in includes/Linchpin/hatch-hooks.php */
 					do_action( 'hatch_footer_inner_after' ); ?>
-
-					<nav id="footer-navigation">
-						<?php
-						wp_nav_menu( array(
-							'container'       => false,
-							'container_class' => '',
-							'menu'            => '',
-							'menu_class'      => 'footer-menu',
-							'theme_location'  => 'footer',
-							'before'          => '',
-							'after'           => '',
-							'link_before'     => '',
-							'link_after'      => '',
-							'depth'           => 5,
-							'fallback_cb'     => false,
-							'walker'          => new Foundation_Walker_Nav_Menu(),
-						) );
-						?>
-					</nav>
 
 				</footer>
 
