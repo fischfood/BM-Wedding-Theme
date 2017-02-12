@@ -5,9 +5,12 @@
 nav.top-bar {
 	background-color: $white;
 	box-shadow: 0px 0px 1rem rgba($black,.5);
-	position: fixed;
 	width: 100%;
 	z-index: 1060;
+
+	@media #{$medium-up} {
+		position: fixed;
+	}
 
 	.top-bar-section {
 		> ul {
@@ -30,11 +33,18 @@ nav.top-bar {
 					position: relative;
 					text-transform: uppercase;
 
-					&:before {
-						content: "/";
-						position: absolute;
-						left: -5px;
-						color: $black;
+					@media #{$small-only} {
+						padding: .5rem;
+					}
+
+					@media #{$medium-up} {
+
+						&:before {
+							content: "/";
+							position: absolute;
+							left: -5px;
+							color: $black;
+						}
 					}
 
 					&.active-anchor {
@@ -59,6 +69,10 @@ nav.top-bar {
 
 	+ .top-bar-spacer {
 		height: 4.6875rem;
+
+		@media #{$small-only} {
+			display: none;
+		}
 	}
 }
 

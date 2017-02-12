@@ -18,7 +18,7 @@ if ( isset( $options['logo_upload'] ) ) {
 	$logo = true;
 }
 ?>
-<nav class="tab-bar show-for-small-only">
+<!-- <nav class="tab-bar show-for-small-only">
 	<section class="right-small">
 		<a class="right-off-canvas-toggle menu-icon"><span></span></a>
 	</section>
@@ -34,7 +34,7 @@ if ( isset( $options['logo_upload'] ) ) {
 		</a>
 	</section>
 </nav>
-
+ -->
 <aside class="right-off-canvas-menu">
 	<?php
 	wp_nav_menu( array(

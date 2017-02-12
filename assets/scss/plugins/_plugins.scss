@@ -6,6 +6,10 @@
 		padding: 0 !important;
 		width: 100% !important;
 	}
+
+	.wdi_photo_overlay:hover {
+		background-color: $primary-color !important;
+	}
 }
 
 /* Mesh */
@@ -14,4 +18,35 @@
 	> .row {
 		box-shadow: inset 0px 0px 10rem rgba($black, .6);
 	}
+}
+
+/* Countdown */
+
+.countdown_section {
+	position: relative;
+    margin-bottom: 1rem !important;
+
+    &:before {
+    	content: "";
+    	display: block;
+    	position: absolute;
+	    left: calc(50% - 45px);
+	    top: -3px;
+
+    	border: 2px solid $color-gray;
+    	border-radius: .5rem;
+	    height: 130%;
+	    width: 90px;
+    }
+
+    .countdown_amount {
+    	color: $primary-color;
+	    display: block;
+	    line-height: 1.3rem;
+	    padding-top: 14px;
+    }
+
+    br {
+    	display: none;
+    }
 }

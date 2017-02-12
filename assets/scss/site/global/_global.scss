@@ -153,6 +153,10 @@ $direction-list: top, right, bottom, left;
  	color: $white;
  }
 
+ .color-gray, .color-grey {
+ 	color: $color-gray;
+ }
+
  @each $direction in $direction-list {
  	.border-#{$direction} {
  		border-#{$direction}: 1px solid $dark-gray;
@@ -196,18 +200,30 @@ $direction-list: top, right, bottom, left;
 
 .background-top {
 	background-position-y: top;
+	.parallax-background {
+		background-position-y: top;
+	}
 }
 
 .background-right {
 	background-position-x: right;
+	.parallax-background {
+		background-position-x: right;
+	}
 }
 
 .background-bottom {
 	background-position-y: bottom;
+	.parallax-background {
+		background-position-y: bottom;
+	}
 }
 
 .background-left {
 	background-position-x: left;
+	.parallax-background {
+		background-position-x: left;
+	}
 }
 
 .background-center {
@@ -216,10 +232,16 @@ $direction-list: top, right, bottom, left;
 
 .background-center-vertical, .background-vertical {
 	background-position-y: center;
+	.parallax-background {
+		background-position-y: center;
+	}
 }
 
 .background-center-horizontal, .background-horizontal {
 	background-position-x: center;
+	.parallax-background {
+		background-position-x: center;
+	}
 }
 
 .background-overlay, .background-overlay-light {

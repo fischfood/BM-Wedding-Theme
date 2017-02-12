@@ -3321,9 +3321,34 @@ table.hover tr:nth-of-type(even):hover {
   padding: 0 !important;
   width: 100% !important; }
 
+.wdi_feed_main_container .wdi_photo_overlay:hover {
+  background-color: #F7941E !important; }
+
 /* Mesh */
 .has-parallax > .row {
   box-shadow: inset 0px 0px 10rem rgba(10, 10, 10, 0.6); }
+
+/* Countdown */
+.countdown_section {
+  position: relative;
+  margin-bottom: 1rem !important; }
+  .countdown_section:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: calc(50% - 45px);
+    top: -3px;
+    border: 2px solid #dbdbdb;
+    border-radius: .5rem;
+    height: 130%;
+    width: 90px; }
+  .countdown_section .countdown_amount {
+    color: #F7941E;
+    display: block;
+    line-height: 1.3rem;
+    padding-top: 14px; }
+  .countdown_section br {
+    display: none; }
 
 /* ---------------------------------------------------------------------
  * G00 - Imports and Lists
@@ -3437,9 +3462,11 @@ ul.inline {
 nav.top-bar {
   background-color: #fefefe;
   box-shadow: 0px 0px 1rem rgba(10, 10, 10, 0.5);
-  position: fixed;
   width: 100%;
   z-index: 1060; }
+  @media screen and (min-width: 40em) {
+    nav.top-bar {
+      position: fixed; } }
   nav.top-bar .top-bar-section > ul {
     background-color: #fefefe;
     margin: 0;
@@ -3457,11 +3484,15 @@ nav.top-bar {
         padding: 1rem;
         position: relative;
         text-transform: uppercase; }
-        nav.top-bar .top-bar-section > ul > li > a:before {
-          content: "/";
-          position: absolute;
-          left: -5px;
-          color: #0a0a0a; }
+        @media screen and (min-width: 0em) and (max-width: 39.9375em) {
+          nav.top-bar .top-bar-section > ul > li > a {
+            padding: .5rem; } }
+        @media screen and (min-width: 40em) {
+          nav.top-bar .top-bar-section > ul > li > a:before {
+            content: "/";
+            position: absolute;
+            left: -5px;
+            color: #0a0a0a; } }
         nav.top-bar .top-bar-section > ul > li > a.active-anchor {
           color: #F7941E; }
       nav.top-bar .top-bar-section > ul > li:hover a, nav.top-bar .top-bar-section > ul > li:active a, nav.top-bar .top-bar-section > ul > li.active a {
@@ -3470,6 +3501,9 @@ nav.top-bar {
         display: none; }
   nav.top-bar + .top-bar-spacer {
     height: 4.6875rem; }
+    @media screen and (min-width: 0em) and (max-width: 39.9375em) {
+      nav.top-bar + .top-bar-spacer {
+        display: none; } }
 
 /* Hero */
 ol.commentlist {
@@ -3780,6 +3814,9 @@ ol.commentlist {
 .color-white {
   color: #fefefe; }
 
+.color-gray, .color-grey {
+  color: #dbdbdb; }
+
 .border-top {
   border-top: 1px solid #8a8a8a; }
 
@@ -3843,24 +3880,36 @@ ol.commentlist {
 
 .background-top {
   background-position-y: top; }
+  .background-top .parallax-background {
+    background-position-y: top; }
 
 .background-right {
   background-position-x: right; }
+  .background-right .parallax-background {
+    background-position-x: right; }
 
 .background-bottom {
   background-position-y: bottom; }
+  .background-bottom .parallax-background {
+    background-position-y: bottom; }
 
 .background-left {
   background-position-x: left; }
+  .background-left .parallax-background {
+    background-position-x: left; }
 
 .background-center {
   background-position: center center; }
 
 .background-center-vertical, .background-vertical {
   background-position-y: center; }
+  .background-center-vertical .parallax-background, .background-vertical .parallax-background {
+    background-position-y: center; }
 
 .background-center-horizontal, .background-horizontal {
   background-position-x: center; }
+  .background-center-horizontal .parallax-background, .background-horizontal .parallax-background {
+    background-position-x: center; }
 
 .background-overlay, .background-overlay-light {
   position: relative; }
