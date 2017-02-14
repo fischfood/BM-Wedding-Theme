@@ -40,7 +40,6 @@ onlyfischinthesea.site = function ( $ ) {
         addEvents : function () {
 
           if ( $body.length ) {
-            self.oliveUnlock();
             self.modalAddClose();
           }
 

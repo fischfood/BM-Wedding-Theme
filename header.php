@@ -10,11 +10,8 @@
 
 ?>
 
-<?php $olive = ''; if ( !is_user_logged_in() ) { $olive = 'olive-back olive-back-show'; } ?>
-
-
 <!doctype html>
-<html class="no-js <?php echo $olive; ?>" <?php language_attributes(); ?> >
+<html class="no-js" <?php language_attributes(); ?> >
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,8 +30,6 @@
 <body <?php body_class(); ?>>
 
 <?php do_action( 'hatch_body_tag_after' ); ?>
-
-<?php if ( !is_user_logged_in() ): ?><div class="olive hide"><?php endif; ?>
 
 <div class="off-canvas-wrap" data-offcanvas>
 	<div class="inner-wrap">

@@ -3350,6 +3350,13 @@ table.hover tr:nth-of-type(even):hover {
   .countdown_section br {
     display: none; }
 
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
+  .hasCountdown {
+    max-width: 260px; }
+    .hasCountdown .countdown_section {
+      width: 49% !important;
+      margin-bottom: 30px !important; } }
+
 /* ---------------------------------------------------------------------
  * G00 - Imports and Lists
  * G01 - Heights / Padding / Margins
@@ -3589,6 +3596,16 @@ ol.commentlist {
 .large-padding-top {
   padding-top: 4rem; }
 
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
+  .no-padding-top-mobile {
+    padding-top: 0rem; }
+  .small-padding-top-mobile {
+    padding-top: 1rem; }
+  .padding-top-mobile {
+    padding-top: 2rem; }
+  .large-padding-top-mobile {
+    padding-top: 4rem; } }
+
 .no-padding-right {
   padding-right: 0rem; }
 
@@ -3600,6 +3617,16 @@ ol.commentlist {
 
 .large-padding-right {
   padding-right: 4rem; }
+
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
+  .no-padding-right-mobile {
+    padding-right: 0rem; }
+  .small-padding-right-mobile {
+    padding-right: 1rem; }
+  .padding-right-mobile {
+    padding-right: 2rem; }
+  .large-padding-right-mobile {
+    padding-right: 4rem; } }
 
 .no-padding-bottom {
   padding-bottom: 0rem; }
@@ -3613,6 +3640,16 @@ ol.commentlist {
 .large-padding-bottom {
   padding-bottom: 4rem; }
 
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
+  .no-padding-bottom-mobile {
+    padding-bottom: 0rem; }
+  .small-padding-bottom-mobile {
+    padding-bottom: 1rem; }
+  .padding-bottom-mobile {
+    padding-bottom: 2rem; }
+  .large-padding-bottom-mobile {
+    padding-bottom: 4rem; } }
+
 .no-padding-left {
   padding-left: 0rem; }
 
@@ -3624,6 +3661,16 @@ ol.commentlist {
 
 .large-padding-left {
   padding-left: 4rem; }
+
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
+  .no-padding-left-mobile {
+    padding-left: 0rem; }
+  .small-padding-left-mobile {
+    padding-left: 1rem; }
+  .padding-left-mobile {
+    padding-left: 2rem; }
+  .large-padding-left-mobile {
+    padding-left: 4rem; } }
 
 .no-margin {
   margin: 0; }

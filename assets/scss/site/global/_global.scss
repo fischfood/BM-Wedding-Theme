@@ -82,7 +82,25 @@ $direction-list: top, right, bottom, left;
 
     .large-padding-#{$direction} { 
         padding-#{$direction}: 4rem;
-    }    
+    }  
+
+    @media #{$small-only} {
+    	.no-padding-#{$direction}-mobile { 
+	        padding-#{$direction}: 0rem;
+	    }
+
+	    .small-padding-#{$direction}-mobile { 
+	        padding-#{$direction}: 1rem;
+	    }
+
+	    .padding-#{$direction}-mobile { 
+	        padding-#{$direction}: 2rem;
+	    }
+
+	    .large-padding-#{$direction}-mobile { 
+	        padding-#{$direction}: 4rem;
+	    }   
+    }  
 }
 
 .no-margin {

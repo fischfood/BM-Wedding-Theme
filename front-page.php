@@ -13,13 +13,13 @@
 
 ?>
 
-<?php if ( !is_user_logged_in() ): ?>
+<?php /* if ( !is_user_logged_in() ): ?>
 	<div class="olive">
 
 		<?php get_template_part('temp-front'); ?>
 
 	</div>
-<?php endif; ?>
+<?php endif; */ ?>
 
 <?php get_header(); ?>
 	
