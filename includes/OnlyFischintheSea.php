@@ -44,6 +44,8 @@ class OnlyFischintheSea {
 		add_filter( 'site_icon_image_sizes', array( $this, 'site_icon_image_sizes' ) );
 		add_filter( 'site_icon_meta_tags',   array( $this, 'site_icon_meta_tags' ) );
 
+		add_filter( 'mesh_allowed_html',    array( $this, 'mesh_allowed_html' ) );
+
 		add_action( 'wp_enqueue_scripts', 	array( $this, 'wp_enqueue_scripts') );
 		add_action( 'wp_enqueue_scripts', 	array( $this, 'wp_enqueue_styles') );
 		add_action( 'init', 			  	array( $this, 'init' ) );
@@ -115,6 +117,14 @@ class OnlyFischintheSea {
 		}
 
 		return $meta_tags;
+	}
+
+	function mesh_allowed_html( $mesh_allowed_html ) {
+
+		$mesh_allowed_html['a']['onclick'] = array();
+		$mesh_allowed_html['span']['onclick'] = array();
+
+		return $mesh_allowed_html;
 	}
 
 	/**
