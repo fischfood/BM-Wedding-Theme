@@ -47,9 +47,23 @@ onlyfischinthesea.site = function ( $ ) {
             .on('click', '.top-bar-menu a', self.smoothScrolling )
             .on('click', '.song-form-trigger', self.songForm )
             .on('click', '.pie-form-trigger', self.pieForm )
+            .on('click', '.close-thanks', self.closeThanks)
             .on('click', '.modal-overlay, .modal-close', self.closeModal );
 
           $window.scroll( self.scrollActive );
+
+
+          if (window.location.search.indexOf('letsdancethenightaway') > -1) {
+
+              $('body').addClass('modal-active');
+              $('.song-thanks-modal').addClass('active');
+
+          } else if (window.location.search.indexOf('thatwasatoughchoice') > -1) {
+
+              $('body').addClass('modal-active');
+              $('.pie-thanks-modal').addClass('active');
+
+          }
 
         },
 
@@ -122,6 +136,10 @@ onlyfischinthesea.site = function ( $ ) {
         pieForm : function () {
           $('.pie-form-modal').addClass('active');
           $('body').addClass('modal-active');
+        },
+
+        closeThanks : function () {
+          $('.song-thanks-modal, .pie-thanks-modal').removeClass('active');
         },
 
         closeModal : function () {
