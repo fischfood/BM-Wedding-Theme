@@ -10,6 +10,19 @@
 	.wdi_photo_overlay:hover {
 		background-color: $primary-color !important;
 	}
+
+	.wdi_feed_item {
+		@media screen and (max-width: 1024px) and (min-width: 800px) {
+			width: 25% !important;
+		}
+		@media screen and (max-width: 799px) {
+			width: 50% !important;
+		}
+	}
+}
+
+.wdi_pagination_container {
+	display: none !important; //Hides pagination so max of 8 show
 }
 
 /* Mesh */
@@ -58,6 +71,20 @@
 		.countdown_section {
 			width: 49% !important;
 			margin-bottom: 30px !important;
+		}
+	}
+}
+
+/* Gravity Forms */
+
+.gfield_radio {
+	clear: both;
+
+	input {
+		float: left;
+
+		+ label {
+			padding-left: .5rem !important;
 		}
 	}
 }

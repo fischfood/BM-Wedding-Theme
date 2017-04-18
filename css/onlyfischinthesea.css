@@ -3324,6 +3324,17 @@ table.hover tr:nth-of-type(even):hover {
 .wdi_feed_main_container .wdi_photo_overlay:hover {
   background-color: #F7941E !important; }
 
+@media screen and (max-width: 1024px) and (min-width: 800px) {
+  .wdi_feed_main_container .wdi_feed_item {
+    width: 25% !important; } }
+
+@media screen and (max-width: 799px) {
+  .wdi_feed_main_container .wdi_feed_item {
+    width: 50% !important; } }
+
+.wdi_pagination_container {
+  display: none !important; }
+
 /* Mesh */
 .has-parallax > .row {
   box-shadow: inset 0px 0px 10rem rgba(10, 10, 10, 0.6); }
@@ -3356,6 +3367,14 @@ table.hover tr:nth-of-type(even):hover {
     .hasCountdown .countdown_section {
       width: 49% !important;
       margin-bottom: 30px !important; } }
+
+/* Gravity Forms */
+.gfield_radio {
+  clear: both; }
+  .gfield_radio input {
+    float: left; }
+    .gfield_radio input + label {
+      padding-left: .5rem !important; }
 
 /* ---------------------------------------------------------------------
  * G00 - Imports and Lists
